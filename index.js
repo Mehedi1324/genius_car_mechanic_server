@@ -31,6 +31,7 @@ async function run() {
             res.send(services);
         })
 
+
         // Get single service
 
         app.get("/services/:id", async (req, res) => {
@@ -72,7 +73,9 @@ async function run() {
 }
 run().catch(console.dir);
 
-
+app.get("/hello", (req, res) => {
+    res.send("hello")
+})
 
 app.get("/", (req, res) => {
     res.send("Running Genius server");
